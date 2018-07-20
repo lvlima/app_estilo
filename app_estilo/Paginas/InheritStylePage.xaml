@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="app_estilo.Paginas.InheritStylePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="estiloPai" TargetType="View">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="BackgroundColor" Value="Green" />
+            </Style>
+            <Style x:Key="estiloLabel" TargetType="Label" BasedOn="{StaticResource estiloPai}">
+                <Setter Property="TextColor" Value="Red" />
+            </Style>
+            <Style x:Key="estiloBotao" TargetType="Button" BasedOn="{StaticResource estiloPai}">
+                <Setter Property="TextColor" Value="Olive" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+        <StackLayout>
+            <!-- Place new controls here -->
+            <Label Text="Welcome to Xamarin.Forms! 1" Style="{StaticResource estiloLabel}" />
+            <Label Text="Welcome to Xamarin.Forms! 2" Style="{StaticResource estiloLabel}" />
+            <Label Text="Welcome to Xamarin.Forms! 3" Style="{StaticResource estiloLabel}" />
+            <Label Text="Welcome to Xamarin.Forms! 4" />
+            <Button Text="OK" Style="{StaticResource estiloBotao}" />
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
